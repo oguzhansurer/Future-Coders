@@ -1,0 +1,1154 @@
+* {
+  scroll-behavior:smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+  }
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior:smooth;
+  background-color: white;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+}
+
+/* --- Navbar start ---  */
+
+.navbar {
+  flex: 9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-block: clamp(6px,1vw,20px);
+  max-width: 1150px;
+  height: clamp(60px,20vw,190px);
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: white;
+  padding-inline: 8px;
+
+  /* Start of a */
+  a {
+    transition: all 400ms;
+    color: #053471;
+    cursor: pointer;
+
+    &:hover {
+      color: #d30e40;
+    }
+  }
+  /* End of a */
+  
+  /* Start of .header-logo */
+  .header-logo {
+    img {
+      width: clamp(48px,4vw,64px);
+      height: clamp(48px,4vw,64px);
+      object-fit: contain;
+    }
+  }
+  /* End of .header-logo */
+
+  /* Start of .header-right */
+  .header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    margin-right: 8px;
+
+    /* Start of .menu */
+    .menu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      font-size: clamp(12px,2vw,16px);
+
+    }
+    /* End of .menu */
+  
+    /* Start of .header-quote */
+    .header-quote {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-left: 24px;
+      gap: 36px;
+      border-left: 1px solid #c0c0c0;
+      font-size: clamp(12px,2vw,16px);
+
+  
+      /* Start of .login */
+      .login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        color: #053471;
+        cursor: pointer;
+        font-size: clamp(12px,2vw,16px);
+  
+        &:hover {
+          color: #d30e40;
+        }
+      }
+      /* End of .login */
+    }
+    /* End of .header-quote */
+  }
+  /* End of .header-right */
+}
+
+/* --- Navbar end --- */
+
+
+/* --- Main page start --- */
+
+.main-page {
+  margin: 0;
+  flex: 91;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+
+  /* Start of .popular-courses */
+  .popular-courses {
+    min-height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* End of .popular-courses */
+  
+  /* Start of .bg-image-div */
+  .bg-image-div {
+    height: 100%;
+    position: relative;
+
+    /* Start of img */
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .red-text {
+      font-size: clamp(10px ,4vw, 23px);
+      background-color: #d30e40;
+      padding: 4px 16px;
+      width: fit-content;
+    }
+    /* End of img */
+
+    /* Start of .overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clamp(480px,100vw,100%);
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6615021008403361) 50%, rgba(0, 0, 0, 0.2497373949579832) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: baseline;
+      color: white;
+      font-size: 1.4em;
+      z-index: 2;
+
+      /* Start of .info-title */
+      .info-title {
+        margin-left: clamp(36px,18vw,400px);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: clamp(8px ,1vw, 23px);;
+
+        /* Start of button */
+        button {
+          width: fit-content;
+          transition: all 400ms;
+          margin-top: 24px;
+          padding: 14px 24px;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+          color: white;
+          outline: none;
+          border: 2px solid #6e6e6e;
+
+          &:hover {
+            border: 2px solid #d30e40;
+            background-color: #d30e40;
+          }
+        }
+        /* End of button */
+      }
+      /* End of .info-title */
+    }
+    /* End of .overlay */
+  }
+  /* End of .bg-image-div */
+
+  /* Start of .popular-courses */
+  .popular-courses {
+    .popular-courses-center { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      /* Start of button */
+      button {
+        width: fit-content;
+        transition: all 400ms;
+        padding: 14px 24px;
+        font-size: 16px;
+        display: flex;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        outline: none;
+        border: 2px solid #00306E1A;
+
+        &:hover {
+          color: white;
+          border: 2px solid #d30e40;
+          background-color: #d30e40;
+        }
+      }
+      /* End of button */
+      
+      /* Start of .popular-course-cards */
+      .popular-course-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+  
+        /* Start of .popular-course-card */
+        .popular-course-card {
+          max-height: 460px;
+          max-width: 330px;
+          background-color: #ffffff;
+          border-radius: 12px;
+          -webkit-box-shadow: 0px 1px 22px -4px rgba(155, 155, 155, 0.75);
+          -moz-box-shadow: 0px 1px 22px -4px rgba(175, 175, 175, 0.75);
+          box-shadow: 0px 1px 22px -4px rgba(163, 163, 163, 0.75);
+  
+          /* Start of .card-tags */
+          .card-tags {
+            & ul {
+              display: flex;
+              margin-block: 18px;
+              margin-left: 52px;
+              gap: 56px;
+            }
+          }
+          /* End of .card-tags */
+  
+          /* Start of .card-info */
+          .card-info {
+            margin-inline: 8px;
+            color: #00306E;
+            padding: 0px 24px 24px 24px;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-family: "Roboto", sans-serif;
+          }
+          /* End of .card-info */
+  
+          & img {
+            width: 330px;
+            height: 240px;
+            object-fit: cover;
+          }
+  
+          /* Start of .card-subtitle */
+          .card-subtitle {
+            border-top: 1px solid rgb(209, 209, 209);
+            .card-subtitle-container {
+              margin-inline: 20px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              padding: 12px;
+  
+              /* Start of .course-time */
+              .course-time {
+                color: #a09b99;
+              }
+              /* End of .course-time */
+            }
+          }
+          /* End of .card-subtitle */
+        }
+        /* End of .popular-course-card */
+      }
+      /* End of .popular-course-cards */
+    }
+  }
+  /* End of .popular-courses */
+
+  /* Start of .new-courses */
+  .new-courses {
+    background-image: url("https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/1.jpg");
+    min-height: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+    .new-courses-center { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+
+      /* Start of button */
+      button {
+        width: fit-content;
+        transition: all 400ms;
+        padding: 14px 24px;
+        font-size: 16px;
+        display: flex;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        outline: none;
+        border: 2px solid #00306E1A;
+
+        &:hover {
+          color: white;
+          border: 2px solid #d30e40;
+          background-color: #d30e40;
+        }
+      }
+      /* End of button */
+
+      /* Start of .new-course-cards */
+      .new-course-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+  
+        /* Start of .new-course-card */
+        .new-course-card {
+          max-height: 460px;
+          max-width: 330px;
+          background-color: #ffffff;
+          border-radius: 12px;
+          -webkit-box-shadow: 0px 1px 22px -4px rgba(155, 155, 155, 0.75);
+          -moz-box-shadow: 0px 1px 22px -4px rgba(175, 175, 175, 0.75);
+          box-shadow: 0px 1px 22px -4px rgba(163, 163, 163, 0.75);
+  
+          /* Start of .card-tags */
+          .card-tags {
+            & ul {
+              display: flex;
+              margin-block: 18px;
+              margin-left: 52px;
+              gap: 56px;
+            }
+          }
+          /* End of .card-tags */
+  
+          /* Start of .card-info */
+          .card-info {
+            margin-inline: 8px;
+            color: #00306E;
+            padding: 0px 24px 24px 24px;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            font-family: "Roboto", sans-serif;
+          }
+          /* End of .card-info */
+  
+          & img {
+            width: 330px;
+            height: 240px;
+            object-fit: cover;
+          }
+  
+          /* Start of .card-subtitle */
+          .card-subtitle {
+            border-top: 1px solid rgb(209, 209, 209);
+            .card-subtitle-container {
+              margin-inline: 20px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              padding: 12px;
+  
+              /* Start of .course-time */
+              .course-time {
+                color: #a09b99;
+              }
+              /* End of .course-time */
+            }
+          }
+          /* End of .card-subtitle */
+        }
+        /* End of .new-course-card */
+      }
+      /* End of .new-course-cards */
+    }
+  }
+  /* End of .new-courses */
+}
+
+/* --- Main page end --- */
+
+
+/* --- Login & Sign page start --- */
+
+/* Login Page */
+
+.login-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color:#151515;
+
+  /* Start of .login-banner */
+  .login-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    min-height: clamp(200px,10vw,450px);
+    height: 45%;
+    background-size: cover;
+    background-image: url('https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/3.jpg');
+  
+    /* Start of .title */
+    & .title {
+      margin: 0; 
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: clamp(10px,1vw,16px);
+      gap: 12px;
+    }
+    /* End of .title */
+  }
+  /* End of .login-banner */
+  
+  /* Start of .login-form */
+  .login-form {
+    flex: 90;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/1.jpg");
+  
+    /* Start of .wrap-centered-form-div */
+    .wrap-centered-form-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height:clamp(450px,90vw,540px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-sizing: inherit;
+      width: clamp(300px,90vw,500px);
+      margin: 0 auto;
+      margin-top: 96px;
+      border-radius: 5px;
+      background: #fff;
+      
+      form {
+        width: 85%;
+        input {
+          line-height: normal;
+          display: block;
+          outline: none;
+          border-radius: 6px ;
+          font-size: 16px;
+          border-width: 1px ;
+          transition: 0.2s;
+          height: 48px;
+          padding: 10px 18px;
+          margin-bottom: 45px;
+          min-width: 300px;
+          width: 100%;
+          opacity: 1;
+          padding-right: 41px;
+        }
+      }
+
+      /* Start of .keep-signed */
+      .keep-signed {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+        font-size: clamp(10px,3vw,16px);
+        width: 80%;
+
+        a {
+          transition: all 400ms;
+          color: #2c6df8;
+
+          &:hover {
+            color: #d30e40;
+          }
+        }
+        
+        .check {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          
+          input {
+            color: white !important;
+            margin-bottom: 0px;
+            width: 16px;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      /* End of .keep-signed */
+
+      /* Start of .submit-form */
+      .submit-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: clamp(10px,3vw,16px);
+        gap: 8px;
+        width: 85%;
+
+        button {
+          margin: 0;
+          outline: none;
+          text-transform: none;
+          background-color: #3270FC;
+          vertical-align: middle;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          font-weight: 500;
+          border: none;
+          box-sizing: border-box;
+          transition: 200ms;
+          line-height: 26px;
+          font-size: 16px;
+          border-radius: 6px;
+          white-space: nowrap;
+          word-break: keep-all;
+          display: flex;
+          cursor: pointer;
+          width: 100%;
+          padding: 10px 34px;
+          color: white;
+        }
+
+        a {
+          transition: all 400ms;
+          color: #3e7bff;
+
+          &:hover {
+            color: #d30e40;
+          }
+        }
+      }
+      /* End of .submit-form */
+    }
+    /* End of .wrap-centered-form-div */
+  }
+  /* End of .login-form */
+}
+/* End of .login-page-container */
+
+/* Sign Page  */
+
+.sign-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color:#151515;
+
+  /* Start of .sign-banner */
+  .sign-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    min-height: clamp(200px,10vw,450px);
+    background-size: cover;
+    background-image: url('https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/3.jpg');
+  
+    /* Start of .title */
+    & .title {
+      margin: 0; 
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: clamp(8px,2vw,22px);
+      gap: 12px;
+    }
+    /* End of .title */
+  }
+  /* End of .sign-banner */
+  
+  
+
+  /* Start of .sign-form */
+  .sign-form {
+    flex: 90;
+    width: 100%;
+    padding-bottom: 40px;
+    min-height: 1000px;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-image: url("https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/1.jpg");
+  
+    /* Start of .wrap-centered-form-div */
+    .wrap-centered-form-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: fit-content;
+      /* height: 500px; */
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-sizing: inherit;
+      width: clamp(300px,90vw,580px);
+      margin: 0 auto;
+      margin-block: clamp(32px,4vw,76px);
+      padding-block:  clamp(35px,4vw,40px);
+      padding-inline: clamp(25px,3vw,55px);
+      border-radius: 5px;
+      background: #fff;
+      
+      input {
+        line-height: normal;
+        display: block;
+        outline: none !important;
+        border-radius: 6px !important;
+        font-size: 16px;
+        transition: 0.2s;
+        height: 48px;
+        padding: 10px 18px;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        max-width: 100%;
+        padding-right: 41px;
+      }
+
+      /* Start of .submit-form */
+      .submit-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        button {
+          outline: none;
+          background-color: #3270FC;
+          border: none;
+          font-size: 16px;
+          border-radius: 6px;
+          cursor: pointer;
+          width: fit-content;
+          padding: 10px 34px;
+          color: white;
+        }
+
+        a {
+          transition: all 400ms;
+          color: #3e7bff;
+
+          &:hover {
+            color: #d30e40;
+          }
+        }
+      }
+      /* End of .submit-form */
+    }
+    /* End of .wrap-centered-form-div */
+  }
+  /* End of .sign-form */
+}
+/* End of .sign-page-container */
+
+/* --- Login & Sign page end --- */
+
+
+/* --- Footer start --- */
+
+.footer {
+  background-color: #151515;
+  height: 40%;
+  min-height:  300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 24px 32px;
+  padding-bottom: 0;
+
+  /* Start of .footer-justify */
+  .footer-justify {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Start of .footer-top */
+    .footer-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 200px;
+      margin: 16px;
+      font-size: clamp(6px, 2vw, 16px);
+
+      h2 {
+        color: white;
+      }
+
+      /* Start of .footer-top-logo */
+      .footer-top-logo {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+        /* align-items: center; */
+
+        h4 {
+          color: #b2b7b9;
+        }
+
+        img {
+          width: clamp(42px,4vw,72px);
+        }
+      }
+      /* End of .footer-top-logo */
+
+      /* Start of .footer-top-links, .footer-top-about */
+      .footer-top-links,
+      .footer-top-about {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        a {
+          transition: all 400ms;
+          color: #b2b7b9;
+
+          &:hover {
+            color: #d30e40;
+          }
+        }
+      }
+      /* End of .footer-top-links, .footer-top-about */
+    }
+    /* End of .footer-top */
+
+    /* Start of .footer-bottom */
+    .footer-bottom {
+      padding-top: 12px;
+      align-items: center;
+      border-top: 1px solid grey;
+      font-size: clamp(6px, 2vw, 16px);
+
+      .footer-bottom-copyRight {
+        color: #b2b7b9;
+      }
+    }
+    /* End of .footer-bottom */
+  }
+  /* End of .footer-justify */
+}
+
+/* --- Footer End --- */
+
+
+/* --- Who are we ? Start --- */
+
+.who-are-we {
+  background-image: url("https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/1.jpg");
+  min-height: 860px;
+  max-height: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /* Start of .who-are-we-centered */
+  .who-are-we-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    height: 100%;
+    margin-inline: 128px;
+    font-size: clamp(12px,1vw,24px);
+    
+    /* Start of .who-are-we-quesitons */
+    .who-are-we-quesitons {
+      width: clamp(350px,90vw,1200px);
+      height: 500px;
+    }
+    /* End of .who-are-we-quesitons */
+  }
+  /* End of .who-are-we-centered */
+}
+
+/* --- Who are we ? End --- */
+
+
+/* Start of .courses-page-container */
+.courses-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color: black;
+
+  /* Start of .courses-banner */
+  .courses-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: clamp(200px,10vw,450px);
+    height: 45%;
+    background-size: cover;
+    background-image: url('https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/3.jpg');
+
+    /* Start of .title */
+    & .title {
+      margin: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    /* End of .title */
+  }
+  /* End of .courses-banner */
+
+  /* Start of .course-all */
+  .course-all {
+    position: relative;
+    margin-block: clamp(150px, calc(20vw - 30px), 140px);
+    
+
+    /* Start of .course-all-cards */
+    .course-all-cards {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    /* End of .course-all-cards */
+
+    /* Start of .course-filter */
+    .course-filter {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      top: -180px;
+      left: 50%;
+      color: white;
+      transform: translate(-50%);
+      position: absolute;
+      width: clamp(200px,90vw,550px);
+      height: 120px;
+      padding: 12px;
+      border-radius: 12px;
+      background-image: url(https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/02/cta.jpg);
+      background-size: contain;
+
+      /* Start of .course-filter-sections */
+      .course-filter-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        /* Start of .course-filter-section */
+        .course-filter-section {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+        }
+        /* End of .course-filter-section */
+      }
+      /* End of .course-filter-sections */
+    }
+    /* End of .course-filter */
+
+    /* Start of .popular-course-card */
+    .popular-course-card {
+      max-height: 460px;
+      max-width: 330px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      -webkit-box-shadow: 0px 1px 22px -4px rgba(155, 155, 155, 0.75);
+      -moz-box-shadow: 0px 1px 22px -4px rgba(175, 175, 175, 0.75);
+      box-shadow: 0px 1px 22px -4px rgba(163, 163, 163, 0.75);
+
+      /* Start of .card-tags */
+      .card-tags {
+        & ul {
+          display: flex;
+          margin-block: 18px;
+          margin-left: 52px;
+          gap: 56px;
+        }
+      }
+      /* End of .card-tags */
+
+      .card-info {
+        margin-inline: 8px;
+        color: #00306E;
+        padding: 0px 24px 24px 24px;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      & img {
+        width: 330px;
+        height: 240px;
+        object-fit: cover;
+      }
+
+      /* Start of .card-subtitle */
+      .card-subtitle {
+        border-top: 1px solid rgb(209, 209, 209);
+
+        /* Start of .card-subtitle-container */
+        .card-subtitle-container {
+          margin-inline: 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 12px;
+
+          .course-time {
+            color: #a09b99;
+          }
+        }
+        /* End of .card-subtitle-container */
+      }
+      /* End of .card-subtitle */
+    }
+    /* End of .popular-course-card */
+  }
+  /* End of .course-all */
+}
+/* End of .courses-page-container */
+
+
+/* Start of .roadmap-page-container */
+.roadmap-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  align-items: center;
+  color: #213547;
+
+  /* Start of .post-container */
+  .post-container {
+    width: clamp(300px,90vw,600px);
+    position: relative;
+    -webkit-box-shadow: 0px 1px 22px -4px rgba(155, 155, 155, 0.75);
+    -moz-box-shadow: 0px 1px 22px -4px rgba(175, 175, 175, 0.75);
+    box-shadow: 0px 1px 22px -4px rgba(163, 163, 163, 0.75);
+    padding-bottom: 12px;
+    border-radius: 12px;
+
+    /* Start of #post-upper-image */
+    #post-upper-image {
+      width: 100%;
+      object-fit: cover;
+    }
+    /* End of #post-upper-image */
+
+    /* Start of .post-info */
+    .post-info {
+      margin: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      /* Start of .post-tags */
+      .post-tags {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        font-size: 10px;
+
+        /* Start of .tag */
+        .tag {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+          & img {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        /* End of .tag */
+
+      }
+      /* End of .post-tags */
+
+      /* Start of .post-title */
+      .post-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        font-size: clamp(8px,3vw,22px);
+
+        /* Start of button */
+        button {
+          display: flex;
+          transition: all 400ms;
+          gap: 12px;
+          outline: none;
+          border: none;
+          font-size: 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          width: fit-content;
+          border: 2px solid #e5eaf0;
+          padding: 10px 34px;
+          background-color: white;
+          color: rgb(0, 0, 0);
+
+          &:hover {
+            border: 2px solid #3270fc;
+            background-color: #3270fc;
+            color: #ffffff;
+          }
+        }
+        /* End of button */
+
+        & span {
+          font-size: clamp(5px,2vw,16px);
+          margin-bottom: 16px;
+        }
+      }
+      /* End of .post-title */
+    }
+    /* End of .post-info */
+  }
+  /* End of .post-container */
+
+  /* Start of .roadmap-banner */
+  .roadmap-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    min-height: clamp(200px,10vw,450px);
+    height: 45%;
+    background-size: cover;
+    background-image: url('https://reactheme.com/products/wordpress/echooling/wp-content/uploads/2022/01/3.jpg');
+
+    /* Start of .title */
+    & .title {
+      margin: 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    /* End of .title */
+  }
+  /* End of .roadmap-banner */
+
+  /* Start of .roadmap-all */
+  .roadmap-all {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 36px;
+    margin: 96px;
+
+    /* Start of .roadmap-all-posts */
+    .roadmap-all-posts {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    /* End of .roadmap-all-posts */
+  }
+  /* End of .roadmap-all */
+}
+/* End of .roadmap-page-container */
